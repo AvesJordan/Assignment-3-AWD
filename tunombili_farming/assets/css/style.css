@@ -1,0 +1,125 @@
+/* CSS Variables for colors & themes */
+:root {
+    --color-green-primary: #2E7D32; /* Main nature green */
+    --color-green-light: #4CAF50;
+    --color-green-dark: #1B5E20;
+    --color-white: #FFFFFF;
+    --color-grey-light: #F5F5F5;
+    --color-grey-medium: #E0E0E0;
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    
+    /* 8px Spacing System */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-8: 64px;
+    
+    /* Font family */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Reset & Spacing */
+body {
+    background-color: var(--color-grey-light);
+    color: var(--color-text-dark);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-green-dark);
+    margin-bottom: var(--space-2);
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-green-primary);
+    color: var(--color-white);
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: var(--space-1);
+}
+
+.sidebar-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-2);
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: var(--color-green-dark);
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: var(--space-4);
+    background-color: var(--color-grey-light);
+    overflow-y: auto;
+}
+
+/* Cards & Containers */
+.card-custom {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid var(--color-grey-medium);
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--color-green-primary);
+    color: var(--color-white);
+    border: none;
+    padding: var(--space-1) var(--space-2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-green-dark);
+    color: var(--color-white);
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
